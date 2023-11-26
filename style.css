@@ -1,0 +1,85 @@
+.fan {
+    background-color: rgb(233, 100, 233);
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fan-container {
+    /* position: relative; */
+    display: flex;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  .fan-container div {
+    width: 60px;
+    height: 180px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transition: all 1s linear;
+    transform: translateX(-50%);
+    transform-origin: center 85%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .red {
+    background-color: red;
+    z-index: 5;
+  }
+  .orange {
+    background-color: orange;
+
+  }
+  .yellow {
+    background-color: yellow;
+
+  }
+   
+  .lemon {
+    background-color: lime;
+
+  }
+  .blue {
+    background-color: blue;
+  
+  
+  }
+  .grey {
+    background-color: gray;
+  }
+  .red::before {
+    content: " ";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 6;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .fan-container:hover .red {
+    transform: translateX(-60%) rotate(70deg);
+  }
+  .fan-container:hover .orange {
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .fan-container:hover .yellow {
+    transform: translateX(-50%) rotate(15deg);
+  }
+  .fan-container:hover .grey {
+    transform: translateX(-50%) rotate(-70deg);
+  }
+  .fan-container:hover .blue {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  .fan-container:hover .lemon {
+    transform: translateX(-50%) rotate(-15deg);
+  }
+  
